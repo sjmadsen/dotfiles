@@ -1,5 +1,4 @@
-for prefix in /usr/local /usr/local/apache \
-  /usr/local/sphinx $HOME; do
+for prefix in /usr/local /usr/local/apache /usr/local/aws /usr/local/sphinx $HOME; do
 	if [ -d $prefix/bin ]; then
 		PATH=$prefix/bin:$PATH
 	fi
