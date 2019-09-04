@@ -57,5 +57,7 @@ stty -ixon
 
 if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
-export RUBY_GC_MALLOC_LIMIT=90000000
-export RUBY_GC_HEAP_FREE_SLOTS=200000
+if [ -d $HOME/.nvm ]; then
+	export NVM_DIR="$HOME/.nvm"
+	. "/usr/local/opt/nvm/nvm.sh"
+fi
