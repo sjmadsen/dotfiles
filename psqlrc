@@ -1,0 +1,5 @@
+\setenv PAGER 'pspg -bXF --ignore-case --less-status-bar --only-for-tables'
+\pset border 2
+\pset linestyle unicode
+\pset expanded
+\timing on
