@@ -1,2 +1,2 @@
 alias dir="ls -l"
-alias ls="ls -F"
+alias ls="ls -ohF"
