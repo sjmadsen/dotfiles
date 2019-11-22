@@ -64,4 +64,8 @@ if [ "$PS1" ]; then
 	fi
 
 	export VISUAL=$EDITOR
+
+	if type pigz >/dev/null 2>&1; then
+		alias gzip=pigz
+	fi
 fi
