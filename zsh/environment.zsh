@@ -4,6 +4,9 @@ export VISUAL="subl -w"
 
 if whence -p rbenv >/dev/null; then
     eval "$(rbenv init -)"
+    if whence -p brew >/dev/null; then
+        export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+    fi
 fi
 
 if [ -d "$HOME/.nvm" ]; then
