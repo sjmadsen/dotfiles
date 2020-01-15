@@ -7,3 +7,5 @@ install -SC -m 0644 gitexcludes ~/.gitexcludes
 install -SC -m 0644 inputrc ~/.inputrc
 install -SC -m 0644 lldbinit ~/.lldbinit
 install -SC -m 0644 psqlrc ~/.psqlrc
+mkdir -p ~/.config/git
+install -SC -m 0644 gitattributes ~/.config/git/attributes
