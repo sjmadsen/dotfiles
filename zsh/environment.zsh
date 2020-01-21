@@ -2,6 +2,8 @@ export PATH="$HOME/bin:$PATH"
 export LESS=-eiMQRX
 export VISUAL="subl -w"
 
+unsetopt autopushd
+
 if whence -p rbenv >/dev/null; then
     eval "$(rbenv init -)"
     if whence -p brew >/dev/null; then
