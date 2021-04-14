@@ -1,6 +1,7 @@
 export PATH="$HOME/bin:$PATH"
 export LESS=-eiMQRX
-export VISUAL="code -w"
+export EDITOR="code -w"
+export VISUAL="$EDITOR"
 
 unsetopt autopushd
 
