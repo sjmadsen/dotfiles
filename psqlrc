@@ -3,3 +3,4 @@
 \pset linestyle unicode
 \pset expanded auto
 \timing on
+\set COMP_KEYWORD_CASE upper
