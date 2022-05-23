@@ -1,7 +1,12 @@
 unsetopt autopushd
 
 if [ -d /opt/homebrew ]; then
-    export PATH="/opt/homebrew/bin:$PATH"
+    PATH="/opt/homebrew/bin:$PATH"
+fi
+
+
+if [ -d "$HOME/go" ]; then
+    PATH="$HOME/go/bin:$PATH"
 fi
 
 export PATH="$HOME/bin:$PATH"
