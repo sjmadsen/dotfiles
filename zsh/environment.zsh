@@ -4,6 +4,9 @@ if [ -d /opt/homebrew ]; then
     PATH="/opt/homebrew/bin:$PATH"
 fi
 
+if [ -d /opt/homebrew/opt/postgresql@16/bin ]; then
+    PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+fi
 
 if [ -d "$HOME/go" ]; then
     PATH="$HOME/go/bin:$PATH"
