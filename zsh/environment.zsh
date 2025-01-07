@@ -4,8 +4,13 @@ if [ -d /opt/homebrew ]; then
     PATH="/opt/homebrew/bin:$PATH"
 fi
 
-if [ -d /opt/homebrew/opt/postgresql@16/bin ]; then
-    PATH="/opt/homebrew/opt/postgresql@16/bin:$PATH"
+if [[ -n "$(echo /opt/homebrew/Cellar/postgresql@*)" ]]; then
+    for (( pg_version = $(date +%y) - 7; pg_version > 0; pg_version -= 1 )); do
+        if [[ -d /opt/homebrew/opt/postgresql@${pg_version}/bin ]]; then
+            PATH="/opt/homebrew/opt/postgresql@${pg_version}/bin:$PATH"
+            break
+        fi
+    done
 fi
 
 if [ -d "$HOME/go" ]; then
